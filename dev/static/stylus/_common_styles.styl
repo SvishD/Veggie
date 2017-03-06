@@ -1,0 +1,395 @@
+// header
+.container
+	max-width 1550px
+	margin 0 auto
+	width 98%
+.header
+	min-height 970px
+	background-image url(../img/general/header_bg.jpg)
+	background-size cover
+	background-color #f3f4f5
+	background-repeat no-repeat
+	padding-top 50px
+	position relative
+	z-index 20
+.main-nav
+	margin-bottom 50px
+	width 100%
+.main-nav__list
+	float right
+	font-size 0
+.main-nav__item
+	display inline-block
+	font-size 18px
+	margin-left 14px
+	&.active
+		.main-nav__link
+			border 1px solid #3c3c3c
+.main-nav__link
+	padding 15px 20px
+	display block
+	border 1px solid transparent
+	transition: all .3s
+	&:hover
+		border 1px solid #3c3c3c
+
+.burger-menu
+	display none
+	float right
+	background transparent
+	width 50px
+	height 50px
+	z-index 50
+	position relative
+	cursor pointer
+.burger-menu__bar,
+.burger-menu__bar::before,
+.burger-menu__bar::after
+	cursor pointer
+	border-radius 1px
+	height 3px
+	width 35px
+	background #3c3c3c
+	position absolute
+	z-index 50
+	left 30%
+	top 50%
+	display block
+	content ''
+	transition all 0.5s ease-in-out
+.burger-menu__bar::before
+	left: 0;
+	top: -10px;
+.burger-menu__bar::after
+	left: 0;
+	top: 10px;
+.burger-menu.active 
+	.burger-menu__bar::before, 
+	.burger-menu__bar::after 
+		top: 0
+
+.burger-menu.active 
+	.burger-menu__bar 
+		background-color transparent
+	.burger-menu__bar::before 
+		transform: rotate(135deg)
+	.burger-menu__bar::after 
+		transform: rotate(-135deg)
+
+
+.off-canvas
+	position fixed
+	background #e7e8e8
+	bottom 0
+	left 0
+	width 90%
+	height 100%
+	opacity 0
+	z-index 0
+	padding-top 20px
+	box-shadow: 5px 10px 15px 5px rgba(0,0,0,.1)
+	transform translate(-80%, 0%)
+	transition all 1s cubic-bezier(1.000, -0.650, 0.000, 1.650)
+	.main-nav__list,
+	.main-nav__item
+		display block
+	.main-nav__link
+		padding-left 10%
+	.socials
+		float none
+		text-align center
+		margin-left 10%
+		margin-top 5%
+	&_opened 
+		opacity 1
+		z-index 50
+		transform translate(-10%, 0%)
+
+
+.header__content
+	text-align center
+	margin-top 10%
+	margin-right 5%
+	float right
+	max-width 550px
+
+.title
+	font-family 'MerriweatherLight'
+	line-height 55px
+	font-size 40px
+	display block
+	&::after
+		content ''
+		display block
+		margin 30px auto 55px
+		sprite($s-decor_1)
+
+.adv
+	padding 60px 0 0
+	background-image url(../img/general/pattern3.jpg)
+.adv__list
+	text-align center
+	margin 0 -2%
+.adv__item
+	max-width 380px
+	margin-bottom 20px
+	margin 0 2% 6%
+	display inline-block
+	vertical-align top
+.adv__icon
+	height 80px !important
+	width 80px
+	line-height 80
+	display inline-block
+	margin-bottom 35px
+	&_cup
+		sprite($s-Tea)
+	&_tea
+		sprite($s-noodle)
+	&_cake
+		sprite($s-sweet)
+.adv__title
+	text-transform uppercase
+	margin-bottom 30px
+
+
+.spec
+	padding 80px 0 50px
+	text-align center
+.spec__list
+	font-size 0
+.spec__item
+	font-size 16px
+	display inline-block
+	max-width 500px
+	background-color #f8f8f8
+.spec__item-img,
+.spec__item-content
+	width 50%
+	float left
+.spec__item-img
+	width 250px
+	height 250px
+.spec__item-content
+	padding-top 60px
+.spec__item-title
+	font-family 'MerriweatherBold', Helvetica, sans-serif
+	&::after
+		content ''
+		display block
+		margin 18px auto
+		width 50px
+		height 1px
+		background-color #000
+.spec__item-descr
+	margin-bottom 15px
+	font-family 'MerriweatherLight'
+.spec__item-price
+	font-family 'MerriweatherBold', Helvetica, sans-serif
+	
+
+.about
+	background-color #eeefef
+	padding-bottom 50px
+.about__content,
+.about__img
+	float left
+	width 50%
+.about__content
+	text-align center
+	padding-top 13%
+.about__text
+	max-width 615px
+	padding-bottom 150px
+	margin 0 auto
+	font-family 'MerriweatherLight', Helvetica, sans-serif
+	font-size 30px
+	line-height 54px
+	position relative
+	&::after
+		content ''
+		display block
+		right 0
+		bottom 0px
+		position absolute
+		sprite($s-signature)
+.about__img
+	padding-top 5%
+.about__pic
+	width 100%
+	
+
+.menu
+	text-align center
+	padding-top 70px
+.tabs__list
+	@extend .main-nav__list
+	float none
+	margin-bottom 80px
+
+.tabs__link
+	@extend .main-nav__link
+	margin-left 14px
+	margin-bottom 14px
+	font-size 18px
+	display inline-block
+	cursor pointer
+	&.active
+	.tabs__link
+		border 1px solid #3c3c3c
+.tabs__menu
+	min-height 530px
+.tabs__menu-section
+	display none
+	&:first-child
+		display block
+.tabs__menu-list 
+	float left
+	width 45%
+	margin-right 10%
+	&:nth-child(2) 
+		margin-right 0px
+.tabs__menu-item 
+	margin-bottom 40px
+	font-size 18px
+	text-align left
+	font-family 'MerriweatherLight', Helvetica, sans-serif
+.tabs__menu-item-name
+	text-transform uppercase
+	padding-right 35px
+	border-bottom 2px dotted rgb(213, 213, 213)
+.tabs__menu-item-descr 
+	font-family 'MerriweatherLightItalic', Helvetica, sans-serif
+	font-size 14px
+	letter-spacing -0.5px
+	line-height 1.5em
+.tabs__menu-item-price
+	float right
+	padding-left 8px
+	margin-top -12px
+	background-color #fff
+
+
+.footer
+	position relative
+	min-height 970px
+	background-image url(../img/general/footer_bg.jpg)
+	background-color #eeefef
+	background-size cover
+.contact
+	padding-top 60px
+	max-width 570px
+	float right
+.contact__item
+	width 50%
+	margin-bottom 100px
+	float left
+	text-align left
+.contact__item-title
+	margin-bottom 15px
+	text-transform uppercase
+	font-size 18px
+	font-weight normal
+.contact__item-content
+	line-height 24px
+.contact__item-link
+	display block
+	word-wrap break-word
+	&:hover
+		text-decoration underline
+
+.contact-form__title
+	margin-bottom 35px
+	font-size 18px
+	text-transform uppercase
+	text-align left
+.contact-form__field
+	margin-bottom 50px
+	border none
+	border-bottom 1px solid #000
+	background-color inherit
+	padding 10px 20px
+	font-size 18px
+	font-family 'MerriweatherItalic', Helvetica, sans-serif
+	box-shadow inset 0 0 0 0 transparent
+	transition all .3s ease-in-out
+	&:focus
+		box-shadow: inset 0px 0 10px 0px #3c3c3c;
+	&:hover
+		box-shadow: inset 0px 0 10px 0px #3c3c3c;
+	&::placeholder
+		color #3c3c3c
+		opacity 1
+	&::-moz-placeholder
+		color #3c3c3c
+		opacity 1
+	&:-ms-input-placeholder
+		color #3c3c3c
+		opacity 1
+	&_name
+		float left
+		width 45%
+	&_email
+		float right
+		width 50%
+	&_txt
+		width 100%
+		overflow-x hidden
+		-ms-overflow-style: none
+.contact-form__btn
+	padding 15px 30px
+	border 1px solid #3c3c3c
+	background-color transparent
+	cursor pointer
+	box-shadow:  0px 0 0px 0px #3c3c3c;
+	transition all .3s
+	&:hover
+		background-color rgba(255,255,255,.9)
+		box-shadow:  0px 0 5px 0px #3c3c3c;
+
+.footer
+	position relative
+	z-index 10	
+.footer__bottom
+	position: absolute;
+	padding 30px
+	text-align center
+	left: 0;
+	bottom: 0;
+	width: 100%;
+.copyright
+	display inline-block
+	padding-top 30px
+.socials
+	display block
+	float right
+	font-size 0
+.socials__item
+	display inline-block
+	vertical-align top
+	margin-left 10px
+	text-align center
+	border 1px solid #3c3c3c
+	&:first-child
+		margin-left 0
+.socials__link
+	display block
+	width 50px
+	height 50px
+	box-shadow:  0px 0 0px 0px #3c3c3c;
+	transition all .3s
+	&:hover
+		background-color rgba(255,255,255,.5)
+		box-shadow:  0px 0 5px 0px #3c3c3c;
+.socials__ico
+	display inline-block
+	width 25px
+	height 25px
+	&_fb
+		sprite($s-fb)
+		margin-top 13px
+	&_ins
+		sprite($s-insta)
+		margin-top 11px
+
+	

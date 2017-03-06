@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'MerriweatherBold';
+    src: url('merriweather-bold-webfont.woff2') format('woff2'),
+         url('merriweather-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MerriweatherItalic';
+    src: url('merriweather-italic-webfont.woff2') format('woff2'),
+         url('merriweather-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MerriweatherLight';
+    src: url('merriweather-light-webfont.woff2') format('woff2'),
+         url('merriweather-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MerriweatherLightItalic';
+    src: url('merriweather-lightitalic-webfont.woff2') format('woff2'),
+         url('merriweather-lightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MerriweatherRegular';
+    src: url('merriweather-regular-webfont.woff2') format('woff2'),
+         url('merriweather-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

@@ -1,0 +1,129 @@
+/*==========  Desktop First  ==========*/
+@media only screen and (max-width : 1650px)
+	.footer
+		background: radial-gradient(ellipse at center, #ffffff 0%,#efefef 100%)
+		text-align center
+	.contact
+		float none
+		margin 0 auto 200px
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1400px)
+	/**/
+	.header
+		background: radial-gradient(ellipse at center, #ffffff 0%,#efefef 100%)
+		min-height initial
+		text-align center
+	.main-nav__list,
+	.header__content
+		float none
+		text-align center
+	.header__content
+		margin 100px auto 200px
+	
+
+	.about
+		padding-bottom 0
+	.about__content,
+	.about__img
+		float none
+		width 100%
+	.about__img
+		padding-top 0
+	.about__pic
+		max-width 700px
+		display block
+		margin 0 auto
+		
+	.tabs__menu-list
+		float none
+		width 65%
+		margin 0 auto
+		&:nth-child(2) 
+			margin-right auto
+		
+@media only screen and (max-width : 1037px)
+	.spec__item:nth-child(2n)
+		.spec__item-img, 
+		.spec__item-content
+			float right
+		
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+		
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	.main-nav__list
+		display none
+	.burger-menu
+		display block
+		margin-right 10px
+		
+	.about__text
+		font-size 24px
+		line-height 46px
+		&::after
+			bottom -15px
+			right 50%
+			margin-right -120px
+
+@media only screen and (max-width : 600px)
+	.contact__item
+		float none
+		margin 0 auto 60px
+		text-align center
+	.contact-form__title
+		text-align center
+	.contact-form__field_name, 
+	.contact-form__field_email,
+	.contact-form__field_txt
+		width 90%
+		float none
+	.copyright
+		margin-bottom 20px
+	.socials
+		float none
+
+@media only screen and (max-width : 530px)
+	/**/
+	.spec__item, .spec__item:nth-child(2n)
+		display block
+		.spec__item-img, 
+		.spec__item-content
+			float none
+			margin 0 auto
+		.spec__item-content
+			width 70%
+			padding 20px 0 40px
+	
+	.spec__bottom
+		.spec__item
+			display flex
+			flex-direction column-reverse
+	
+	.tabs__menu-list
+		width 90%
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	.about__text
+		font-size 20px
+		line-height 40px
+	.about__pic
+		margin-top 20px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+	
+/*==========  Mobile First  ==========*/
+@media only screen and (min-width : 768px)
+	.off-canvas
+		display none
